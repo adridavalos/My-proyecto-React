@@ -1,10 +1,18 @@
-import { useAuth0 } from "@auth0/auth0-react";
-import Button from '@mui/material/Button';
-
+import Button from "@mui/material/Button";
+import { useAuth } from "../../context/AuthContext";
 const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
+  //TODO: usar contexto en vez de llamar a la funcion de auth0
+  const { loginWithRedirect } = useAuth();
 
-  return <Button sx={{ color: 'white', marginRight: 2 }} onClick={() => loginWithRedirect()}>Sign In</Button>;
+  return (
+    <Button
+      sx={{ color: "white", marginRight: 2 }}
+      // Llama a la función loginWithRedirect(), que inicia el proceso de autenticación de Auth0 mediante redirección.
+      onClick={() => loginWithRedirect()}
+    >
+      Sign In
+    </Button>
+  );
 };
 
 export default LoginButton;

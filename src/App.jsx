@@ -1,16 +1,16 @@
-
 import UserProfile from "./components/common/UserProfile";
 import Home from "./components/pages/Home";
+import AuthProvider from "./context/AuthContext";
 
 function App() {
-
   return (
     <>
-     <Home/>
-     <UserProfile/>
+      <AuthProvider>
+        <Home />
+        <UserProfile />
+      </AuthProvider>
     </>
-     
-  )
+  );
 }
 
-export default App
+export default App;
