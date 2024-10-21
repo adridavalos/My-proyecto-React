@@ -1,15 +1,13 @@
-
-import { Navbar } from "../layout/Navbar"
-import Body from "../layout/Body"
+import { NavbarGuest } from "../layout/NavbarGuest";
+import Body from "../layout/Body";
 
 function App() {
-
   return (
     <>
-      <Navbar/>
-      <Body/>
+      <NavbarGuest />
+      <Body />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

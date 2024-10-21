@@ -13,7 +13,9 @@ const AuthProvider = ({ children }) => {
         redirect_uri: window.location.origin,
       }}
     >
-      <AuthContext.Provider value={useAuth0()}>{children}</AuthContext.Provider>
+      <AuthContext.Provider value={{ useAuth0 }}>
+        {children}
+      </AuthContext.Provider>
     </Auth0Provider>
   );
 };

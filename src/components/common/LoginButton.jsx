@@ -2,7 +2,8 @@ import Button from "@mui/material/Button";
 import { useAuth } from "../../context/AuthContext";
 const LoginButton = () => {
   //TODO: usar contexto en vez de llamar a la funcion de auth0
-  const { loginWithRedirect } = useAuth();
+  const { useAuth0 } = useAuth();
+  let { loginWithRedirect } = useAuth0();
 
   return (
     <Button

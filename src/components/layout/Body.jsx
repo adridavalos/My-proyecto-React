@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 import StartNowButton from "../common/StartNowButton";
 //TODO: llamar al componente Body
-const BodyBackground = () => {
+const Body = () => {
   return (
     <Box
       sx={{
@@ -65,4 +65,4 @@ const BodyBackground = () => {
   );
 };
 
-export default BodyBackground;
+export default Body;

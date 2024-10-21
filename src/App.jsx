@@ -1,14 +1,24 @@
 import UserProfile from "./components/common/UserProfile";
-import Home from "./components/pages/Home";
+import Body from "./components/layout/Body";
 import AuthProvider from "./context/AuthContext";
+import LogoutButton from "./components/common/LogoutButton";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "./components/layout/Layout";
 
 function App() {
   return (
     <>
-      <AuthProvider>
-        <Home />
-        <UserProfile />
-      </AuthProvider>
+      <BrowserRouter>
+        <AuthProvider>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Body />} />
+            </Route>
+          </Routes>
+          <UserProfile />
+          <LogoutButton />
+        </AuthProvider>
+      </BrowserRouter>
     </>
   );
 }
