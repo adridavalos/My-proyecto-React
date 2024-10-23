@@ -7,7 +7,16 @@ const LoginButton = () => {
 
   return (
     <Button
-      sx={{ color: "white", marginRight: 2 }}
+      sx={{
+        color: "white",
+        marginRight: 2,
+        border: "1px solid lightgray", // Borde fino gris claro
+        padding: "6px 12px", // Un poco de padding para que el botón tenga más espacio
+        borderRadius: "4px", // Bordes ligeramente redondeados (opcional)
+        "&:hover": {
+          border: "1px solid gray", // Cambia el color del borde al hacer hover
+        },
+      }}
       // Llama a la función loginWithRedirect(), que inicia el proceso de autenticación de Auth0 mediante redirección.
       onClick={() => loginWithRedirect()}
     >

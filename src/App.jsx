@@ -1,4 +1,3 @@
-import UserProfile from "./components/common/UserProfile";
 import Body from "./components/layout/Body";
 import AuthProvider from "./context/AuthContext";
 import LogoutButton from "./components/common/LogoutButton";
@@ -15,7 +14,6 @@ function App() {
               <Route path="/" element={<Body />} />
             </Route>
           </Routes>
-          <UserProfile />
           <LogoutButton />
         </AuthProvider>
       </BrowserRouter>
